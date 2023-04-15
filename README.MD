@@ -1,5 +1,5 @@
 ![ ](https://img.shields.io/github/v/tag/agpsn/lidarr-develop?color=00CCFF&label=:develop&style=plastic&logo=%20) 
-
+ 
 
 ```
 docker run -d \
