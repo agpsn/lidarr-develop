@@ -7,7 +7,7 @@ LVERSION=$(curl -sL "https://lidarr.servarr.com/v1/update/develop/changes?runtim
 
 if [ $GBRANCH != "develop" ]; then git checkout develop; fi
 	echo "Building and Pushing 'ghcr.io/agpsn/docker-lidarr:$LVERSION'"
-	docker build --force-rm --rm --tag ghcr.io/agpsn/docker-lidarr:develop --tag ghcr.io/agpsn/docker-lidarr:$LVERSION -f ./Dockerfile.develop .
+	docker build --quiet  --force-rm --rm --tag ghcr.io/agpsn/docker-lidarr:develop --tag ghcr.io/agpsn/docker-lidarr:$LVERSION -f ./Dockerfile.develop .
 	docker push --quiet ghcr.io/agpsn/docker-lidarr:develop; docker push --quiet ghcr.io/agpsn/docker-lidarr:$LVERSION && docker image rm -f ghcr.io/agpsn/docker-lidarr:$LVERSION
 	git tag -f $LVERSION && git push origin $LVERSION -f --tags
 	echo ""
