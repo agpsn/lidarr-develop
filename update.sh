@@ -12,6 +12,3 @@ if [ $GBRANCH != "develop" ]; then git checkout develop; fi
 	git tag -f $LVERSION && git push origin $LVERSION -f --tags
 	echo ""
 	git add . && git commit -m "Updated" && git push --quiet
-
-
-
