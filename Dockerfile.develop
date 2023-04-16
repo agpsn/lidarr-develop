@@ -23,4 +23,4 @@ LABEL org.opencontainers.image.source="https://github.com/agpsn/lidarr-develop"
 # ports and volumes
 EXPOSE 8686
 VOLUME "${CONFIG_DIR}"
-RUN VERSION=$(cat "${APP_DIR}/lidarr/app_version")
+RUN VERSION=$(cat $APP_DIR/lidarr/app_version)
