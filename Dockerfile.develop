@@ -23,4 +23,4 @@ LABEL org.opencontainers.image.source="https://github.com/agpsn/lidarr-develop"
 # ports and volumes
 EXPOSE 8686
 VOLUME "${CONFIG_DIR}"
-ENV S6_LOGGING=1
+ENV S6_LOGGING 11
