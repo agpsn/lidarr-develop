@@ -15,6 +15,8 @@ VERSION=$(cat /app/lidarr/app_version)
 ----------------------------------------------------------------------
 "
 
+VERSION=$(cat $APP_DIR/lidarr/app_version)
+
 if [[ ! "${PUID}" -eq 0 ]] && [[ ! "${PGID}" -eq 0 ]]; then
     echo "Executing usermod..."
     mkdir "/tmp/temphome"
