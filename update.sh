@@ -1,5 +1,5 @@
 #!/bin/bash
-clear; set -eu
+set -eu
 
 [ ! -d "/mnt/user/system/agpsn-github/lidarr-develop" ] && echo "No repo!" && exit 1
 cd "/mnt/user/system/agpsn-github/lidarr-develop"
