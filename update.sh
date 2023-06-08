@@ -11,3 +11,5 @@ git tag -f $LVERSION && git push --quiet origin $LVERSION -f --tags
 git add . && git commit -m "Updated" && git push --quiet
 docker push --quiet ghcr.io/agpsn/docker-lidarr:develop; docker push --quiet ghcr.io/agpsn/docker-lidarr:$LVERSION && docker image rm -f ghcr.io/agpsn/docker-lidarr:$LVERSION
 echo ""
+
+echo v$LVERSION > .version
