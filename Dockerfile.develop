@@ -1,5 +1,5 @@
-FROM ghcr.io/agpsn/docker-base:alpine
- 
+FROM ghcr.io/agpsn/alpine-base:latest
+
 #MAIN
 ARG LVERSION
 ARG LBRANCH="develop"
