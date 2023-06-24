@@ -1,16 +1,16 @@
-![ ](https://img.shields.io/github/v/tag/agpsn/lidarr-develop?color=00CCFF&label=:develop&style=plastic&logo=%20) 
- 
+![ ](https://ghcr-badge.egpl.dev/agpsn/docker-lidarr/size?tag=develop&color=black&label=SIZE&ignore=latest)
+![ ](https://ghcr-badge.egpl.dev/agpsn/docker-lidarr/latest_tag?color=black&label=VERSION&ignore=latest)
 
 ```
 docker run -d \
   --name=lidarr \
-  -e PUID=99 \
-  -e PGID=100 \
-  -e TZ=UTC \ #optional
-  -e UMASK=022 \  #optional
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  -e UMASK=022 \
   -p <hostport>:8686 \
   -v <hostconfigpath>:/config \
-  -v <hostmediapath>:/data \ #optional
-  --restart unless-stopped \  #optional
+  -v <hostmediapath>:/data \
+  --restart unless-stopped \
   ghcr.io/agpsn/docker-lidarr:develop
 ```
